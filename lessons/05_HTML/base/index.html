@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table width="100%">
         <tr>
             <td>
                 <form action="http://fe.it-academy.by/TestForm.php">
                     <fieldset>
                      <legend>Строка поиска</legend>
-                        <input type="text" pattern="[0-9]{,10}">
+                        <input type="text" name="text1" maxlength="10">
                         <input type="submit" value="Искать"><br>
                         <input type="radio" name="radio" value="radio1">на сайте
                         <input type="radio" name="radio" value="radio2">в google
@@ -24,7 +24,7 @@
                 <form action="http://fe.it-academy.by/TestForm.php">
                     <fieldset>
                      <legend>Строка поиска</legend>
-                        <input type="text" required placeholder="Искать" autofocus>
+                        <input type="text" name="text2" required placeholder="Искать" autofocus>
                         <input type="submit" value="Искать"><br>
                         <input type="radio" name="radio" value="radio1">на сайте
                         <input type="radio" name="radio" value="radio2">в google
@@ -37,8 +37,8 @@
                 <form action="http://fe.it-academy.by/TestForm.php" method="post">
                     <fieldset>
                       <legend>Авторизуйтесь</legend>
-                        <input type="login" name="login" required>Логин<br>
-                        <input type="password" name="password" required>Пароль<br>
+                        <input type="text" name="login" required>*Логин<br>
+                        <input type="password" name="password" required>*Пароль<br>
                         <input type="checkbox" name=“checkbox" checked> Оставаться в системе<br>
                         <input type="submit" value="Войти">
                     </fieldset>
@@ -63,7 +63,7 @@
                 <form action="http://fe.it-academy.by/TestForm.php" method="post">
                     <fieldset>
                       <legend>Оставьте Ваш отзыв</legend>
-                        <input type="text" name="name" required>*Имя<br>
+                        <input type="text" name="name5" required>*Имя<br>
                         <input type="email" name="email" required>*e-mail<br>
                         <textarea name="text" rows="5" cols="15" name="text_area">Форма отправки</textarea><br>
                         <input type="submit" value="Отправить">
@@ -104,7 +104,7 @@
                       Файл:<br>
                       <input type="file" name="file"><br>
                       Срок хранения (года):<br>
-                      <input type="text">
+                      <input type="text" name="valid">
                       <input type="submit" value="загрузить">
                     </fieldset>
                 </form>
@@ -113,8 +113,8 @@
                 <form action="http://fe.it-academy.by/TestForm.php" method="post">
                     <fieldset>
                       <legend>Строка поиска</legend>
-                      <input type="text" placeholder="Только русские буквы" pattern="[А-Яа-яЁё]"><br>
-                      <input type="text" pattern="+[0-9]{3}\-[0-9]{9}"><br>
+                      <input type="text" name="text*8" placeholder="Только русские буквы" pattern="([А-Яа-яЁё]+)"><br>
+                      <input type="text" name="number" pattern="^(\+375|80)(29|25|44|33|17)(\d{3})(\d{2})(\d{2})$"><br>
                       <input type="submit" value="Проверить">
                     </fieldset>
                 </form> 
